@@ -115,7 +115,7 @@
 								</div>
 								<div class="inner columns divided">
 									<div class="span-3-25">
-										<form id="contact-form" action="https://formspree.io/f/mgoyelan" method="POST">
+										<form action="mailto:etrev17@wgu.edu" method="GET">
 											<div class="fields">
 												<div class="field half">
 													<label for="name">Name</label>
@@ -134,26 +134,6 @@
 												<li><input type="submit" value="Send Message" class="button primary" /></li>
 											</ul>
 										</form>
-										<script>
- 										 // Optional: AJAX submit for instant confirmation
-										  const form = document.getElementById('contact-form');
-										  form.addEventListener('submit', async function(event) {
-										    event.preventDefault();
-										    const formData = new FormData(form);
-										    const response = await fetch(form.action, {
-										      method: form.method,
-										      body: formData,
-										      headers: { 'Accept': 'application/json' }
-										    });
-										    if (response.ok) {
-										      alert('Message sent! Thank you!');
-										      form.reset();
-										    } else {
-										      alert('Oops! There was a problem.');
-										    }
-										  });
-										</script>
-										
 									</div>
 									<div class="span-1-5">
 										<ul class="contact-icons color1">
@@ -184,6 +164,3 @@
 	</body>
 
 </html>
-
-
-
