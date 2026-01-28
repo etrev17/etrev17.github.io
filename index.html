@@ -134,6 +134,26 @@
 												<li><input type="submit" value="Send Message" class="button primary" /></li>
 											</ul>
 										</form>
+										<script>
+ 										 // Optional: AJAX submit for instant confirmation
+										  const form = document.getElementById('contact-form');
+										  form.addEventListener('submit', async function(event) {
+										    event.preventDefault();
+										    const formData = new FormData(form);
+										    const response = await fetch(form.action, {
+										      method: form.method,
+										      body: formData,
+										      headers: { 'Accept': 'application/json' }
+										    });
+										    if (response.ok) {
+										      alert('Message sent! Thank you!');
+										      form.reset();
+										    } else {
+										      alert('Oops! There was a problem.');
+										    }
+										  });
+										</script>
+										
 									</div>
 									<div class="span-1-5">
 										<ul class="contact-icons color1">
@@ -164,6 +184,7 @@
 	</body>
 
 </html>
+
 
 
 
